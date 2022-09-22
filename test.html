@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typed</title>
+</head>
+<body>
+    
+    <p>I'm <span class="typed" id="typed" data-typed-items="a Back-End Developer, a Freelancer"></span></p>
+    
+    
+  <script src="typed.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script>
+      const typed = document.getElementById("typed")
+      if (typed) {
+        let typed_strings = typed.getAttribute('data-typed-items')
+        typed_strings = typed_strings.split(',')
+        new Typed('.typed', {
+          strings: typed_strings,
+          loop: true,
+          typeSpeed: 100,
+          backSpeed: 50,
+          backDelay: 2000
+        });
+      }
+  </script>
+</body>
+</html>
